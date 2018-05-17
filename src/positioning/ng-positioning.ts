@@ -138,6 +138,7 @@ export class Positioning {
         );
       if (newPlacementPrimary) placementPrimary = newPlacementPrimary;
       targetElement.classList.add(placementPrimary);
+      targetElement.setAttribute('x-placement', placementPrimary);
     }
 
     switch (placementPrimary) {

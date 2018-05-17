@@ -21,11 +21,17 @@ import { isBs3 } from '../utils/theme-provider';
     :host.tooltip {
       display: block;
     }
-    :host.bs-tooltip-top .arrow, :host.bs-tooltip-bottom .arrow {
+    :host.bs-tooltip-top .arrow,
+    :host.bs-tooltip-bottom .arrow,
+    :host.bs-tooltip-auto[x-placement^="top"] .arrow,
+    :host.bs-tooltip-auto[x-placement^="bottom"] .arrow {
       left: 50%;
       margin-left: -6px;
     }
-    :host.bs-tooltip-left .arrow, :host.bs-tooltip-right .arrow {
+    :host.bs-tooltip-left .arrow,
+    :host.bs-tooltip-right .arrow,
+    :host.bs-tooltip-auto[x-placement^="left"] .arrow,
+    :host.bs-tooltip-auto[x-placement^="right"] .arrow {
       top: 50%;
       margin-top: -6px;
     }
