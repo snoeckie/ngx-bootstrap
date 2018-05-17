@@ -15,14 +15,20 @@ import { isBs3 } from '../utils/theme-provider';
   },
   styles: [
     `
-    :host.bs-popover-top .arrow, :host.bs-popover-bottom .arrow {
-      left: 50%;
-      margin-left: -8px;
-    }
-    :host.bs-popover-left .arrow, :host.bs-popover-right .arrow {
-      top: 50%;
-      margin-top: -8px;
-    }
+      :host.bs-popover-top .arrow,
+      :host.bs-popover-bottom .arrow,
+      :host.bs-popover-auto[x-placement^="top"] .arrow,
+      :host.bs-popover-auto[x-placement^="bottom"] .arrow {
+        left: 50%;
+        margin-left: -8px;
+      }
+      :host.bs-popover-left .arrow,
+      :host.bs-popover-right .arrow,
+      :host.bs-popover-auto[x-placement^="left"] .arrow,
+      :host.bs-popover-auto[x-placement^="right"] .arrow {
+        top: 50%;
+        margin-top: -8px;
+      }
   `
   ],
   templateUrl: './popover-container.component.html'
